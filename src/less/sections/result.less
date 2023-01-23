@@ -1,0 +1,47 @@
+.result {
+	padding-top: 75px;
+	padding-bottom: 68px;
+
+	.sm-block({
+		padding-top: 30px;
+		padding-bottom: 40px;
+	});
+
+	.h2 {
+		margin-bottom: 40px;
+		.sm(margin-bottom, 28px);
+	}
+
+	&__list {
+		font-size: 22px;
+		line-height: 24px;
+		color: @accent;
+		text-align: center;
+
+		.sm(font-size, 20px);
+
+		.row-flex();
+
+		li {
+			margin-bottom: 34px;
+			padding: 66px 12px;
+			background-color: @bg-light;
+			transition: color 0.3s, background-color 1s;
+
+			.sm-block({
+				padding: 60px 30px;
+				margin-bottom: 21px;
+			});
+
+			&:hover, &:active, &:focus {
+				background-color: @accent;
+				color: @accent2;
+			}
+
+			.col();
+			.size(4);
+			.size-md(6);
+			.size-xs(12);
+		}
+	}
+}

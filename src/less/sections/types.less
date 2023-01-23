@@ -1,0 +1,112 @@
+.types {
+	padding-top: 75px;
+	padding-bottom: 10px;
+
+	.sm-block({
+		padding-top: 20px;
+		padding-bottom: 0;
+	});
+
+	.h2 {
+		margin-bottom: 35px;
+		.sm(margin-bottom, 41px);
+	}
+
+	&__list {
+		font-size: 20px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.02em;
+		color: @accent;
+
+		.sm-block({
+			font-size: 12px;
+			line-height: 15px;
+		});
+
+		.row-flex();
+
+		li {
+			position: relative;
+			padding-top: 116px;
+			margin-bottom: 66px;
+			padding-left: 10px;
+			padding-right: 10px;
+			word-wrap: normal!important;
+			
+			.sm-block({
+				padding-top: 67px;
+				margin-bottom: 50px;
+				padding-left: 0;
+				padding-right: 0;
+			});
+			
+			&::before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 50%;
+				margin-left: -49px;
+				width: 98px;
+				height: 98px;
+				transition: transform 0.5s;
+				border: 1px solid @brdr;
+				border-radius: 50%;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-color: @bg-light;
+				background-size: auto;
+
+				.sm-block({
+					width: 55px;
+					height: 55px;
+					margin-left: -24.5px;
+					background-size: 50%;
+				});
+
+			}
+
+			&:nth-child(1)::before {
+				background-image: url(../img/types1.svg);
+			}
+			&:nth-child(2)::before {
+				background-image: url(../img/types2.svg);
+			}
+			&:nth-child(3)::before {
+				background-image: url(../img/types3.svg);
+			}
+			&:nth-child(4)::before {
+				background-image: url(../img/types4.svg);
+			}
+			&:nth-child(5)::before {
+				background-image: url(../img/types5.svg);
+			}
+			&:nth-child(6)::before {
+				background-image: url(../img/types6.svg);
+			}
+			&:nth-child(7)::before {
+				background-image: url(../img/types7.svg);
+			}
+			&:nth-child(8)::before {
+				background-image: url(../img/types8.svg);
+			}
+			&:nth-child(9)::before {
+				background-image: url(../img/types9.svg);
+			}
+			&:nth-child(10)::before {
+				background-image: url(../img/types10.svg);
+			}
+			
+			.col();
+			.size(2.4);
+			.size-md(3);
+			.size-sm(4);
+			.size-xs(6);
+
+			&:hover::before {
+				transform: translateY(-8px);
+			}
+
+		}
+	}
+}

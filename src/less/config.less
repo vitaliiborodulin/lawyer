@@ -1,0 +1,120 @@
+// USER VARIABLES SECTION
+@accent: #1D3559;
+@accent2: #947464;
+@white: #ffffff;
+@black: #3B4248;
+@bg: #FCFBF9;
+@bg-light: #E4EBF0;
+@brdr: #63778A;
+
+
+@fontsize: 22px; // Body Font Size
+@lineheight: 36px; // Document Line Height
+
+@userfont: 'Montserrat', sans-serif;
+@systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+.reset();
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// .debugGrid{
+// 	.debug(rgba(0, 0, 0, 0.3), 1px #ff0 solid);
+// }
+
+.container {
+    .wrapper();
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff'),
+        url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.eot');
+    src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.eot');
+    src: url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+        url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+body {
+    font-family: @userfont;
+    font-size: @fontsize;
+    line-height: @lineheight;
+    font-weight: 400;
+    color: @black;
+    background-color: @bg;
+    text-rendering: optimizeSpeed;
+    position: relative;
+}
+
+.h2 {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 45px;
+    text-transform: uppercase;
+    color: @accent;
+
+    .sm-block({
+        font-size: 20px;
+        line-height: 24px;
+    });
+}
+
+.accent2 {
+    color: @accent2;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+// Remove all mouse-triggered focus styles without breaking keyboard accessibility
+*:focus:not(:focus-visible) { 
+    outline: none !important; 
+}
+
+// fix safari
+input[type='submit'] { 
+	-webkit-appearance: none; 
+	-moz-appearance: none; 
+	appearance: none; 
+}
