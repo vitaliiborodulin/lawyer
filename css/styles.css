@@ -155,7 +155,7 @@ body {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 36px;
   font-weight: 400;
   color: #3B4248;
@@ -198,6 +198,7 @@ input[type='submit'] {
 
 .types__list {
   font-size: 20px;
+  font-weight: 500;
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.02em;
@@ -325,6 +326,93 @@ input[type='submit'] {
   color: #947464;
 }
 
+.how {
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+
+.how .h2 {
+  margin-bottom: 44px;
+}
+
+.how__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.how__box {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(50% - 30px);
+}
+
+.how__image {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(50% - 30px);
+}
+
+.how__image img {
+  margin-bottom: 50px;
+}
+
+.how__item {
+  margin-bottom: 50px;
+}
+
+.how__title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 36px;
+  color: #1D3559;
+}
+
+.how p + p {
+  margin-top: 35px;
+}
+
+.procedure {
+  padding-top: 40px;
+  padding-bottom: 83px;
+}
+
+.procedure .h2 {
+  margin-bottom: 52px;
+}
+
+.procedure__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.02em;
+  counter-reset: proc;
+}
+
+.procedure__list li::before {
+  counter-increment: proc;
+  content: '0' counter(proc) '.';
+  margin-right: 10px;
+  color: #947464;
+}
+
+.procedure__list li {
+  padding-top: 35px;
+  padding-bottom: 41px;
+}
+
+.procedure__list li + li {
+  border-top: 1px solid #63778A;
+}
+
 @media screen and (max-width: 900px) {
   .types__list li {
     width: calc(25% - 30px);
@@ -333,9 +421,22 @@ input[type='submit'] {
   .result__list li {
     width: calc(50% - 30px);
   }
+
+  .how__box {
+    width: calc(100% - 30px);
+  }
+
+  .how__image {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
   .h2 {
     font-size: 20px;
     line-height: 24px;
@@ -389,6 +490,47 @@ input[type='submit'] {
   .result__list li {
     padding: 60px 30px;
     margin-bottom: 21px;
+  }
+
+  .how {
+    padding-top: 20px;
+    padding-bottom: 12px;
+  }
+
+  .how .h2 {
+    margin-bottom: 24px;
+  }
+
+  .how__item {
+    margin-bottom: 35px;
+  }
+
+  .how__title {
+    margin-bottom: 7px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .how p + p {
+    margin-top: 20px;
+  }
+
+  .procedure {
+    padding-top: 12px;
+  }
+
+  .procedure .h2 {
+    margin-bottom: 28px;
+  }
+
+  .procedure__list {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .procedure__list li {
+    padding-top: 18px;
+    padding-bottom: 11px;
   }
 }
 
