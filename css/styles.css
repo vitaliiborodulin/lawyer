@@ -187,6 +187,33 @@ input[type='submit'] {
   appearance: none;
 }
 
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.list li::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 13px;
+  width: 16px;
+  height: 16px;
+  background-color: #947464;
+  border-radius: 50%;
+}
+
+a {
+  color: inherit;
+  font-weight: 500;
+}
+
 .types {
   padding-top: 75px;
   padding-bottom: 10px;
@@ -413,6 +440,95 @@ input[type='submit'] {
   border-top: 1px solid #63778A;
 }
 
+.price {
+  padding-top: 84px;
+  padding-bottom: 70px;
+}
+
+.price .h2 {
+  margin-bottom: 35px;
+}
+
+.price li {
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+}
+
+.price li + li {
+  margin-top: 39px;
+}
+
+.feedback {
+  padding-top: 70px;
+  padding-bottom: 153px;
+}
+
+.feedback .h2 {
+  margin-bottom: 43px;
+}
+
+.footer {
+  color: #FCFBF9;
+  background-color: #1D3559;
+}
+
+.footer__bottom {
+  padding-top: 24px;
+  padding-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.footer__logo img {
+  width: 82px;
+  height: auto;
+  background-color: #FCFBF9;
+  margin-right: 18px;
+}
+
+.footer__soc a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+}
+
+.footer__soc a + a {
+  margin-left: 25px;
+}
+
+.footer__insta {
+  position: relative;
+  background: url(../img/insta.svg) no-repeat center / contain;
+}
+
+.footer__insta::after {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  content: 'Запрещен на территории РФ';
+  font-size: 12px;
+  width: 200px;
+}
+
+.footer__wa {
+  background: url(../img/wa.svg) no-repeat center / contain;
+}
+
+.footer__tg {
+  background: url(../img/tg.svg) no-repeat center / contain;
+}
+
 @media screen and (max-width: 900px) {
   .types__list li {
     width: calc(25% - 30px);
@@ -440,6 +556,17 @@ input[type='submit'] {
   .h2 {
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .list li {
+    padding-left: 10px;
+  }
+
+  .list li::before {
+    top: 7px;
+    width: 2px;
+    height: 2px;
+    background-color: #3B4248;
   }
 
   .types {
@@ -517,6 +644,7 @@ input[type='submit'] {
 
   .procedure {
     padding-top: 12px;
+    padding-bottom: 30px;
   }
 
   .procedure .h2 {
@@ -531,6 +659,56 @@ input[type='submit'] {
   .procedure__list li {
     padding-top: 18px;
     padding-bottom: 11px;
+  }
+
+  .price {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .price .h2 {
+    margin-bottom: 17px;
+  }
+
+  .price li {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .price li + li {
+    margin-top: 20px;
+  }
+
+  .feedback {
+    padding-top: 30px;
+    padding-bottom: 62px;
+  }
+
+  .feedback .h2 {
+    margin-bottom: 22px;
+  }
+
+  .footer__logo {
+    font-size: 6px;
+    line-height: 7px;
+  }
+
+  .footer__logo img {
+    width: 28px;
+    margin-right: 4px;
+  }
+
+  .footer__soc a {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer__soc a + a {
+    margin-left: 12px;
+  }
+
+  .footer__insta::after {
+    font-size: 4px;
   }
 }
 
