@@ -216,6 +216,31 @@ input[type='submit'] {
   appearance: none;
 }
 
+.btn {
+  position: relative;
+  color: #ffffff;
+  background-color: #1D3559;
+  text-decoration: none;
+  border: none;
+  padding: 22px 36px;
+  display: inline-block;
+}
+
+.btn-o {
+  color: #1D3559;
+  background-color: #ffffff;
+}
+
+.btn-arrow {
+  padding-left: 36px;
+}
+
+.btn-arrow::after {
+  position: relative;
+  content: url(../img/arrow-right.svg);
+  right: -8px;
+}
+
 .list {
   margin: 0;
   padding: 0;
@@ -243,6 +268,128 @@ a {
   font-weight: 500;
 }
 
+.why {
+  padding-top: 72px;
+  padding-bottom: 60px;
+}
+
+.why .h2 {
+  margin-bottom: 53px;
+}
+
+.why__list {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #1D3559;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.why__list li {
+  position: relative;
+  padding-top: 116px;
+  margin-bottom: 82px;
+  word-wrap: normal!important;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(33.333333333333336% - 30px);
+}
+
+.why__list li::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 50%;
+  margin-left: -51px;
+  width: 102px;
+  height: 102px;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #1D3559;
+  background-size: auto;
+}
+
+.why__list li:nth-child(1)::before {
+  background-image: url(../img/why-1.svg);
+}
+
+.why__list li:nth-child(2)::before {
+  background-image: url(../img/why-2.svg);
+}
+
+.why__list li:nth-child(3)::before {
+  background-image: url(../img/why-3.svg);
+}
+
+.why__list li:nth-child(4)::before {
+  background-image: url(../img/why-4.svg);
+}
+
+.why__list li:nth-child(5)::before {
+  background-image: url(../img/why-5.svg);
+}
+
+.why__list li:nth-child(6)::before {
+  background-image: url(../img/why-6.svg);
+}
+
+.why__list li:hover::before {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+.principles {
+  padding-top: 44px;
+  padding-bottom: 68px;
+}
+
+.principles__content {
+  position: relative;
+}
+
+.principles__content::before {
+  position: absolute;
+  content: '';
+  right: 0;
+  top: -22%;
+  width: 341px;
+  height: 470px;
+  background: url(../img/principles-1.jpg) no-repeat center;
+}
+
+.principles__text {
+  max-width: 60%;
+}
+
+.principles .h2 {
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.principles .btn {
+  margin-top: 28px;
+}
+
+.about {
+  padding-top: 163px;
+  padding-bottom: 65px;
+}
+
+.about .h2 {
+  margin-bottom: 19px;
+}
+
 .info {
   padding-top: 65px;
   padding-bottom: 144px;
@@ -254,10 +401,6 @@ a {
 
 .info .row + .row {
   margin-top: 143px;
-}
-
-.info img {
-  max-height: 90vh;
 }
 
 .way__list {
@@ -566,6 +709,18 @@ a {
     display: none;
   }
 
+  .why__list li {
+    width: calc(50% - 30px);
+  }
+
+  .principles__content::before {
+    display: none;
+  }
+
+  .principles__text {
+    max-width: 100%;
+  }
+
   .types__list li {
     width: calc(25% - 30px);
   }
@@ -590,6 +745,10 @@ a {
     margin-top: 20px;
   }
 
+  .btn {
+    padding: 12px;
+  }
+
   .list li {
     padding-left: 10px;
   }
@@ -599,6 +758,59 @@ a {
     width: 2px;
     height: 2px;
     background-color: #3B4248;
+  }
+
+  .why {
+    padding-top: 27px;
+    padding-bottom: 0;
+  }
+
+  .why .h2 {
+    margin-bottom: 39px;
+  }
+
+  .why__list {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .why__list li {
+    padding-top: 80px;
+    margin-bottom: 53px;
+  }
+
+  .why__list li::before {
+    width: 70px;
+    height: 70px;
+    margin-left: -35px;
+    background-size: 50%;
+  }
+
+  .principles {
+    padding-top: 39px;
+    padding-bottom: 49px;
+  }
+
+  .principles .h2 {
+    margin-bottom: 11px;
+  }
+
+  .principles .btn {
+    margin-top: 19px;
+  }
+
+  .about {
+    padding-top: 60px;
+    padding-bottom: 27px;
+  }
+
+  .about .h2 {
+    margin-bottom: 14px;
+  }
+
+  .about img {
+    max-height: 70vh;
+    margin-bottom: 27px;
   }
 
   .info {
@@ -615,6 +827,7 @@ a {
   }
 
   .info img {
+    max-height: 70vh;
     margin-bottom: 59px;
   }
 
@@ -770,6 +983,10 @@ a {
 }
 
 @media screen and (max-width: 576px) {
+  .why__list li {
+    width: calc(100% - 30px);
+  }
+
   .types__list li {
     width: calc(50% - 30px);
   }
