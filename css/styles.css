@@ -403,16 +403,6 @@ a {
   margin-top: 143px;
 }
 
-.info .info-2 .order-last {
-  max-height: 200px;
-  overflow: hidden;
-}
-
-.info .info-2 .order-last img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .way__list {
   margin: 0;
   padding: 87px 50px;
@@ -851,6 +841,17 @@ a {
 
   .info .order-last img {
     margin-bottom: 0;
+  }
+
+  .info .info-2 .order-last {
+    max-height: 200px;
+    overflow: hidden;
+  }
+
+  .info .info-2 .order-last img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
   .way__list {
