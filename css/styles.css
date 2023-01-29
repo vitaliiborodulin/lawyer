@@ -197,6 +197,10 @@ body {
   width: calc(50% - 30px);
 }
 
+.align-center {
+  align-items: center;
+}
+
 p + p {
   margin-top: 34px;
 }
@@ -267,6 +271,18 @@ input[type='submit'] {
 a {
   color: inherit;
   font-weight: 500;
+}
+
+.carousel__slide {
+  width: 50%;
+}
+
+.carousel__button.is-next {
+  right: -30px;
+}
+
+.carousel__button.is-prev {
+  left: -30px;
 }
 
 .why {
@@ -391,6 +407,15 @@ a {
   margin-bottom: 19px;
 }
 
+.diploma {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.diploma .h2 {
+  margin-bottom: 20px;
+}
+
 .info {
   padding-top: 65px;
   padding-bottom: 144px;
@@ -412,6 +437,15 @@ a {
 
 .way li + li {
   margin-top: 58px;
+}
+
+.serts {
+  padding-top: 154px;
+  padding-bottom: 87px;
+}
+
+.serts .btn {
+  margin-top: 28px;
 }
 
 .types {
@@ -727,13 +761,27 @@ a {
   }
 
   .about {
-    padding-top: 60px;
+    padding-top: 27px;
     padding-bottom: 27px;
   }
 
   .about img {
     max-height: 70vh;
     margin-bottom: 27px;
+  }
+
+  .diploma {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+
+  .diploma .carousel {
+    margin-bottom: 58px;
+  }
+
+  .info {
+    padding-top: 28px;
+    padding-bottom: 59px;
   }
 
   .info .row + .row {
@@ -756,6 +804,16 @@ a {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+
+  .serts {
+    padding-top: 59px;
+    padding-bottom: 27px;
+  }
+
+  .types {
+    padding-top: 27px;
+    padding-bottom: 0;
   }
 
   .types__list li {
@@ -840,9 +898,8 @@ a {
     margin-bottom: 14px;
   }
 
-  .info {
-    padding-top: 28px;
-    padding-bottom: 59px;
+  .diploma .h2 {
+    margin-bottom: 13px;
   }
 
   .info .h2 {
@@ -864,11 +921,6 @@ a {
 
   .way li + li {
     margin-top: 37px;
-  }
-
-  .types {
-    padding-top: 20px;
-    padding-bottom: 0;
   }
 
   .types .h2 {
