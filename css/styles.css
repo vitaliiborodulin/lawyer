@@ -196,6 +196,10 @@ body {
   position: relative;
 }
 
+main {
+  min-height: 100vh;
+}
+
 .h1 {
   font-weight: 500;
   font-size: 45px;
@@ -293,6 +297,22 @@ input[type='submit'] {
   appearance: none;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.logo img {
+  width: 82px;
+  height: auto;
+  background-color: #FCFBF9;
+  margin-right: 18px;
+}
+
 .btn {
   position: relative;
   color: #ffffff;
@@ -324,6 +344,24 @@ input[type='submit'] {
 .btn-small {
   padding: 10px 25px;
   font-size: 14px;
+}
+
+.navigation__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 961px;
+  margin: 0 auto;
+}
+
+.navigation__menu a {
+  display: block;
+  padding: 25px;
+  text-decoration: none;
+  color: #1D3559;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .list {
@@ -394,6 +432,113 @@ a {
 
 .form__input + .form__input {
   margin-top: -1px;
+}
+
+.header {
+  padding: 14px 0;
+  border-bottom: 1px solid #BEBEBE;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__contacts-text {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.header__tel a {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.header__tel a + a {
+  margin-left: 20px;
+}
+
+.header__burger {
+  display: none;
+  z-index: 13;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 20px;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.header__burger:focus {
+  outline: none;
+}
+
+.header__burger > span {
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background: #1D3559;
+  position: relative;
+  transition: background 0.5s 0.5s;
+}
+
+.header__burger > span:before,
+.header__burger > span:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 2px;
+  background: #1D3559;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  transition: top 0.5s 0.5s, -webkit-transform 0.5s;
+  transition: top 0.5s 0.5s, transform 0.5s;
+  transition: top 0.5s 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.header__burger > span:before {
+  width: 27px;
+  top: -7px;
+}
+
+.header__burger > span:after {
+  width: 14px;
+  top: 7px;
+}
+
+.header__burger--close {
+  position: relative;
+  z-index: 15;
+}
+
+.header__burger--close > span {
+  transition: background 0.5s;
+  background: transparent;
+}
+
+.header__burger--close > span:before,
+.header__burger--close > span:after {
+  width: 100%;
+  transition: top 0.5s, -webkit-transform 0.5s 0.5s;
+  transition: top 0.5s, transform 0.5s 0.5s;
+  transition: top 0.5s, transform 0.5s 0.5s, -webkit-transform 0.5s 0.5s;
+  top: 0;
+  background-color: #1D3559;
+}
+
+.header__burger--close > span:before {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+          transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.header__burger--close > span:after {
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+          transform: rotate3d(0, 0, 1, -45deg);
 }
 
 .hero {
@@ -889,22 +1034,6 @@ a {
   justify-content: space-between;
 }
 
-.footer__logo {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 500;
-  color: #ffffff;
-}
-
-.footer__logo img {
-  width: 82px;
-  height: auto;
-  background-color: #FCFBF9;
-  margin-right: 18px;
-}
-
 .footer__soc a {
   display: inline-block;
   width: 48px;
@@ -939,6 +1068,10 @@ a {
   background: url(../img/tg.svg) no-repeat center / contain;
 }
 
+.popup__title {
+  margin-bottom: 25px;
+}
+
 @media screen and (max-width: 900px) {
   .h1 {
     font-size: 35px;
@@ -963,6 +1096,23 @@ a {
 
   .order-md-1 {
     order: -1;
+  }
+
+  .navigation__menu {
+    display: none;
+  }
+
+  .header__contacts {
+    display: none;
+  }
+
+  .header .btn {
+    display: none;
+  }
+
+  .header__burger {
+    display: block;
+    display: flex;
   }
 
   .hero {
@@ -1122,6 +1272,14 @@ a {
     margin-top: 20px;
   }
 
+  .logo {
+    margin-top: 10px;
+  }
+
+  .logo img {
+    width: 50px;
+  }
+
   .btn {
     padding: 12px;
   }
@@ -1147,6 +1305,10 @@ a {
     margin-top: 5px;
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .header {
+    border-bottom: none;
   }
 
   .hero__subtitle {
@@ -1315,16 +1477,12 @@ a {
     line-height: 17px;
   }
 
+  .footer__bottom {
+    border-top: none;
+  }
+
   .footer__bottom-content {
     flex-wrap: wrap;
-  }
-
-  .footer__logo {
-    margin-top: 10px;
-  }
-
-  .footer__logo img {
-    width: 50px;
   }
 }
 
