@@ -1126,7 +1126,19 @@ a {
 }
 
 .popup__title {
+  font-size: 35px;
+  line-height: 120%;
   margin-bottom: 25px;
+}
+
+.popup__text {
+  font-size: 20px;
+  line-height: 120%;
+  margin-bottom: 15px;
+}
+
+.fancybox__content {
+  max-width: 500px;
 }
 
 .fancybox__content :focus:not(.carousel__button.is-close) {
@@ -1574,6 +1586,14 @@ a {
 
   .footer__soc {
     margin-top: 30px;
+  }
+
+  .popup__title {
+    font-size: 25px;
+  }
+
+  .popup__text {
+    font-size: 17px;
   }
 }
 

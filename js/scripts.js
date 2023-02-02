@@ -80,4 +80,15 @@ $(function() {
     //     },
     //   },
     // });
+    
+    setTimeout(function(){ 
+    	const fancybox = new Fancybox([
+    			{src: "#back-popup"}
+    	]);
+    }, 15000);
+    $(window).on("beforeunload", function() {
+
+		return "Вы уверены, что хотите покинуть страницу?";
+
+	});
 });
