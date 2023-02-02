@@ -68,19 +68,6 @@ $(function() {
     	// 'Dots': false,
     	// Navigation: false,
     });
-    // Fancybox.bind('[data-fancybox="gallery"]', {
-    //   Carousel: {
-    //     on: {
-    //       change: (that) => {
-    //         // Sync Carousel slide
-    //         mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
-    //           friction: 0,
-    //         });
-    //       },
-    //     },
-    //   },
-    // });
-    
     setTimeout(function(){ 
     	const fancybox = new Fancybox([
     			{src: "#back-popup"}
