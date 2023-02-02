@@ -26,7 +26,7 @@ $(function() {
     	menu.removeClass('open');
     	burger.removeClass('header__burger--close');
     });
-    var cleave = new Cleave('input[type=tel]', {
+    var cleave = new Cleave('.input-phone', {
     	phone: true,
     	phoneRegionCode: 'ru'
     });
@@ -86,9 +86,4 @@ $(function() {
     			{src: "#back-popup"}
     	]);
     }, 15000);
-    $(window).on("beforeunload", function() {
-
-		return "Вы уверены, что хотите покинуть страницу?";
-
-	});
 });
