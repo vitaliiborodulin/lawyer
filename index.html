@@ -440,7 +440,48 @@
 			<div class="container">
 				<h2 class="h2 accent2">Отзывы моих клиентов</h2>
 		
-				<p>тут будут отзывы</p>
+				<div class="row">
+		
+					<div class="col-6">
+						<p>Здесь Вы можете оставить <span class="accent2">отзыв</span>.</p>
+						<p>Мне важно Ваше мнение!</p>
+						<a class="btn" href="javascript:;" data-fancybox data-src="#feedback-popup">оставить отзыв</a>
+					</div>
+		
+					<div class="col-6 order-md-1">
+						<div class="carousel carousel__feedback">
+		
+							<div class="carousel__slide">
+								<div class="carousel__text">
+									Я неоднократно обращалась за консультациями к различным адвокатам. И столкнулась с тем, что многие из них убежденно что-то говорят клиенту, видимо, рассчитывая на его незнание закона. Николай Анатольевич никогда ничего не навязывает клиенту и каждое своё слово сверяет с буквой закона.
+								</div>
+								<div class="carousel__man">
+									<div class="carousel__name">Инна С.</div>
+								</div>
+							</div>
+		
+							<div class="carousel__slide">
+								<div class="carousel__text">
+									Хочется от всей души поблагодарить Вас за высокое знание своего дела и профессионализм. За неоднократную юридическую помощь и поддержку оказанную Вами в решении земельного вопроса. Профессиональных успехов в вашей профессиональной деятельности!
+								</div>
+								<div class="carousel__man">
+									<div class="carousel__name">Анна М.</div>
+								</div>
+							</div>
+		
+							<div class="carousel__slide">
+								<div class="carousel__text">
+									Порядочный и ответственный адвокат. Выиграл наше дело. Рекомендую!
+								</div>
+								<div class="carousel__man">
+									<div class="carousel__name">Максим У.</div>
+								</div>
+							</div>
+		
+						</div>
+					</div>
+		
+				</div>
 		
 			</div>
 		</section>
@@ -502,8 +543,20 @@
 			<div class="popup__title">Заполните форму для обратного звонка</div>
 			<form class="form" action="#">
 				<input class="form__input" type="text" placeholder="Имя" required>
-				<input class="form__input" type="tel" placeholder="Телефон" required>
+				<input class="form__input input-phone" type="tel" placeholder="Телефон" required>
 				<input class="form__input" type="text" placeholder="Комментарий" required>
+				<input class="btn btn-o btn-small" type="submit" value="Записаться">
+			</form>
+		</div>
+	</div>
+	
+	<div class="popup dark-bg" id="feedback-popup" style="display: none;">
+		<div class="popup__inner">
+			<div class="popup__title">Заполните форму для отзыва</div>
+			<form class="form" action="#">
+				<input class="form__input" type="text" placeholder="Имя" required>
+				<input class="form__input input-phone" type="tel" placeholder="Телефон" required>
+				<input class="form__input" type="text" placeholder="Текст отзыва" required>
 				<input class="btn btn-o btn-small" type="submit" value="Записаться">
 			</form>
 		</div>
@@ -511,8 +564,10 @@
 	<!-- end popup -->
 
 	<!-- scripts -->
-	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script src='js/jquery-3.6.3.min.js'></script>
+	<script src="js/fancybox.umd.js"></script>
+	<script src="js/cleave.min.js"></script>
+	<script src="js/cleave-phone.ru.js"></script>
 	<script src="js/scripts.js"></script>
 	<!-- end scripts -->
 	

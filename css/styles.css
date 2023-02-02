@@ -180,6 +180,15 @@ textarea:required:valid {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-SemiBoldItalic.eot');
+  src: url('../fonts/Montserrat-SemiBoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-SemiBoldItalic.woff2') format('woff2'), url('../fonts/Montserrat-SemiBoldItalic.woff') format('woff'), url('../fonts/Montserrat-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
 html,
 body {
   overflow-x: hidden;
@@ -323,6 +332,7 @@ input[type='submit'] {
   display: inline-block;
   text-align: center;
   font-weight: 600;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -342,7 +352,7 @@ input[type='submit'] {
 }
 
 .btn-small {
-  padding: 10px 25px;
+  padding: 2px 30px;
   font-size: 14px;
 }
 
@@ -362,6 +372,19 @@ input[type='submit'] {
   color: #1D3559;
   font-size: 14px;
   line-height: 17px;
+}
+
+.navigation__menu.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.navigation__menu.open a {
+  padding: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 100%;
 }
 
 .list {
@@ -392,7 +415,14 @@ a {
 }
 
 .carousel__slide {
-  width: 50%;
+  width: 100%;
+}
+
+.carousel__name {
+  margin-top: 20px;
+  font-weight: 600;
+  font-style: italic;
+  text-align: right;
 }
 
 .carousel__button.is-next {
@@ -401,6 +431,11 @@ a {
 
 .carousel__button.is-prev {
   left: -30px;
+}
+
+.carousel__diploma .carousel__slide,
+.carousel__sert .carousel__slide {
+  width: 50%;
 }
 
 .blockquote {
@@ -416,6 +451,8 @@ a {
   margin-top: 15px;
   font-size: 30px;
   line-height: 35px;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .form__input {
@@ -430,8 +467,16 @@ a {
   border-bottom: 1px solid #ffffff;
 }
 
+.form__input:focus-visible {
+  outline: none;
+}
+
 .form__input + .form__input {
   margin-top: -1px;
+}
+
+.form .btn {
+  margin-top: 30px;
 }
 
 .header {
@@ -586,6 +631,8 @@ a {
   border-radius: 50%;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 600;
+  font-style: italic;
   padding: 75px 5px;
 }
 
@@ -988,6 +1035,20 @@ a {
   margin-bottom: 43px;
 }
 
+.feedback p {
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+}
+
+.feedback p + p {
+  margin-top: 5px;
+}
+
+.feedback .btn {
+  margin-top: 28px;
+}
+
 .footer__top {
   padding-top: 82px;
   padding-bottom: 54px;
@@ -1017,10 +1078,6 @@ a {
   font-size: 28px;
   line-height: 40px;
   letter-spacing: 0.02em;
-}
-
-.footer .form .btn {
-  margin-top: 30px;
 }
 
 .footer__bottom {
@@ -1072,6 +1129,10 @@ a {
   margin-bottom: 25px;
 }
 
+.fancybox__content :focus:not(.carousel__button.is-close) {
+  outline: none;
+}
+
 @media screen and (max-width: 900px) {
   .h1 {
     font-size: 35px;
@@ -1099,7 +1160,24 @@ a {
   }
 
   .navigation__menu {
-    display: none;
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    transition: all 0.5s ease-in-out;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    z-index: 12;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #1D3559;
   }
 
   .header__contacts {
@@ -1125,8 +1203,8 @@ a {
   }
 
   .hero__banner::before {
-    width: 130px;
-    height: 130px;
+    width: 138px;
+    height: 138px;
     padding: 45px 2px;
     font-size: 14px;
     line-height: 17px;
@@ -1240,6 +1318,15 @@ a {
   .price {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+
+  .feedback {
+    padding-top: 30px;
+    padding-bottom: 62px;
+  }
+
+  .feedback .carousel__feedback {
+    margin-bottom: 80px;
   }
 
   .footer__top {
@@ -1459,13 +1546,13 @@ a {
     margin-top: 20px;
   }
 
-  .feedback {
-    padding-top: 30px;
-    padding-bottom: 62px;
-  }
-
   .feedback .h2 {
     margin-bottom: 22px;
+  }
+
+  .feedback p {
+    font-size: 20px;
+    line-height: 26px;
   }
 
   .footer__contact li span {
@@ -1483,6 +1570,10 @@ a {
 
   .footer__bottom-content {
     flex-wrap: wrap;
+  }
+
+  .footer__soc {
+    margin-top: 30px;
   }
 }
 
