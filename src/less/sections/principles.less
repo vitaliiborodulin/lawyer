@@ -1,0 +1,41 @@
+.principles {
+	padding-top: 44px;
+	padding-bottom: 68px;
+
+	.sm-block({
+		padding-top: 39px;
+		padding-bottom: 49px;
+	});
+
+	&__content {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: '';
+			right: 0;
+			top: -22%;
+			width: 341px;
+			height: 470px;
+			background: url(../img/principles-1.jpg) no-repeat center;
+
+			.md(display, none);
+		}
+	}
+
+	&__text {
+		max-width: 60%;
+		.md(max-width, 100%);
+	}
+	
+	.h2 {
+		color: @white;
+		margin-bottom: 14px;
+		.sm(margin-bottom, 11px);
+	}
+
+	.btn {
+		margin-top: 28px;
+		.sm(margin-top, 19px);
+	}
+}

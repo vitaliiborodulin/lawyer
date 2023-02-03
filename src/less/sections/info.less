@@ -1,0 +1,54 @@
+.info {
+	padding-top: 65px;
+	padding-bottom: 144px;
+
+	.md-block({
+		padding-top: 28px;
+		padding-bottom: 59px;
+	});
+
+	.h2 {
+		margin-bottom: 20px;
+		.sm(margin-bottom, 14px);
+	}
+
+	.row + .row {
+		margin-top: 143px;
+		.md(margin-top, 59px);
+	}
+
+	img {
+		.md-block({
+			max-height: 70vh;
+		});
+		.sm-block({
+			margin-bottom: 59px
+		});
+	}
+
+	.order-md-1 {
+		.md(margin-bottom, 69px);
+	}
+
+	.order-last {
+		img {
+			.md(margin-bottom, 0);
+		}
+	}
+
+	.info-2 {
+		.order-last {
+			.sm-block({
+				max-height: 200px;
+				overflow: hidden;
+			});
+
+			img {
+				.md-block({
+					width: 100%;
+					object-fit: cover;
+				})
+			}
+		}
+	}
+}

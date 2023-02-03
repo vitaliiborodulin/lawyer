@@ -1,0 +1,43 @@
+.how {
+	padding-top: 35px;
+	padding-bottom: 40px;
+
+	.md-block({
+		padding-top: 20px;
+		padding-bottom: 12px;
+	});
+
+	.h2 {
+		margin-bottom: 44px;
+		.sm(margin-bottom, 24px);
+	}
+
+	&__image {
+		margin-bottom: 50px;
+	}
+
+	&__item {
+		margin-bottom: 50px;
+		.sm(margin-bottom, 35px);
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 36px;
+
+		.sm-block({
+			margin-bottom: 7px;
+			font-size: 16px;
+			line-height: 20px;
+		});
+
+		color: @accent;
+	}
+
+	p+p {
+		margin-top: 35px;
+		.sm(margin-top, 20px);
+	}
+}

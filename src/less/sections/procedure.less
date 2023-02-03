@@ -1,0 +1,52 @@
+.procedure {
+	padding-top: 40px;
+	padding-bottom: 83px;
+
+	.md-block({
+		padding-top: 12px;
+		padding-bottom: 30px;
+	});
+
+	.h2 {
+		margin-bottom: 52px;
+		.md(margin-bottom, 28px);
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		font-size: 30px;
+		line-height: 35px;
+		letter-spacing: 0.02em;
+
+		.sm-block({
+			font-size: 14px;
+			line-height: 17px;
+		});
+
+		counter-reset: proc;
+
+		li::before {
+			counter-increment: proc;
+			content: '0'counter(proc)'.';
+			margin-right: 10px;
+			color: @accent2;
+		}
+
+		li {
+			padding-top: 35px;
+			padding-bottom: 41px;
+
+			.sm-block({
+				padding-top: 18px;
+				padding-bottom: 11px;
+			});
+		}
+
+		li+li {
+			border-top: 1px solid @brdr;
+		}
+	}
+}

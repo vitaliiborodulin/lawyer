@@ -43,7 +43,7 @@ function styles() {
 }
 
 function scripts() {
-	return gulp.src('./src/js/scripts.js')
+	return gulp.src('./src/js/*.js')
 		.pipe(rigger())
 		.pipe(gulp.dest('./build/js'))
 		.pipe(gulpIf(isSync, browserSync.stream()));

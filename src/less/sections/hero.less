@@ -1,3 +1,72 @@
 .hero {
-    
+	padding-top: 57px;
+	padding-bottom: 72px;
+
+	.md-block({
+		padding-top: 26px;
+		padding-bottom: 27px;
+	});
+
+	&__content {
+		width: 100%;
+		max-width: 961px;
+		margin: 0 auto;
+	}
+
+	&__top {
+		margin-bottom: 80px;
+	}
+
+	.h1 {
+		margin-bottom: 10px;
+		.md(margin-bottom, 5px);
+	}
+
+	&__subtitle {
+		font-size: 21px;
+		// line-height: 26px;
+		color: @accent;
+		text-align: right;
+
+		.sm-block({
+			font-size: 14px;
+			// line-height: 10px;
+		});
+	}
+
+	&__banner {
+		position: relative;
+		text-align: center;
+
+		&::before {
+			position: absolute;
+			content: 'Доверяйте профессионалам';
+			top: 0;
+			transform: translateY(-50%);
+			left: 3%;
+			// margin-top: -96px;
+			// margin-left: 96px;
+			width: 192px;
+			height: 192px;
+			text-align: center;
+			background-color: @accent;
+			color: @white;
+			border-radius: 50%;
+			font-size: 16px;
+			line-height: 20px;
+			font-weight: 600;
+			font-style: italic;
+			padding: 75px 5px;
+
+			.md-block({
+				width: 138px;
+				height: 138px;
+				// margin-top: -65px;
+				// margin-left: 65px;
+				padding: 45px 2px;
+				font-size: 14px;
+				line-height: 17px;
+			})
+		}
+	}
 }

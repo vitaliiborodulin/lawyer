@@ -1,0 +1,96 @@
+.why {
+	padding-top: 72px;
+	padding-bottom: 60px;
+
+	.md-block({
+		padding-top: 27px;
+		padding-bottom: 0;
+	});
+
+	.h2 {
+		margin-bottom: 53px;
+		.sm(margin-bottom, 39px);
+	}
+
+	&__list {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.02em;
+		color: @accent;
+
+		.sm-block({
+			font-size: 16px;
+			line-height: 20px;
+		});
+
+		.row-flex();
+
+		li {
+			position: relative;
+			padding-top: 116px;
+			margin-bottom: 82px;
+			word-wrap: normal!important;
+
+			.sm-block({
+				padding-top: 80px;
+				margin-bottom: 53px;
+			});
+
+			&::before {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 50%;
+				margin-left: -51px;
+				width: 102px;
+				height: 102px;
+				transition: transform 0.5s;
+				border-radius: 50%;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-color: @accent;
+				background-size: auto;
+
+				.sm-block({
+					width: 70px;
+					height: 70px;
+					margin-left: -35px;
+					background-size: 50%;
+				});
+			}
+
+			&:nth-child(1)::before {
+				background-image: url(../img/why-1.svg);
+			}
+			&:nth-child(2)::before {
+				background-image: url(../img/why-2.svg);
+			}
+			&:nth-child(3)::before {
+				background-image: url(../img/why-3.svg);
+			}
+			&:nth-child(4)::before {
+				background-image: url(../img/why-4.svg);
+			}
+			&:nth-child(5)::before {
+				background-image: url(../img/why-5.svg);
+			}
+			&:nth-child(6)::before {
+				background-image: url(../img/why-6.svg);
+			}
+
+
+			.col();
+			.size(4);
+			.size-md(6);
+			.size-xs(12);
+
+			&:hover::before {
+				transform: translateY(-8px);
+			}
+
+		}
+
+	}
+}

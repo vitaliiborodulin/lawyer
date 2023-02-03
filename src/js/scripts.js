@@ -1,3 +1,6 @@
 $(function() {
-    //= components/header.js
+    //= components/menu.js
+    //= components/input.js
+    //= components/carousel.js
+    //= components/popup.js
 });

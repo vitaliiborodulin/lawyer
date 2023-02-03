@@ -8,7 +8,7 @@
 @brdr: #63778A;
 
 
-@fontsize: 22px; // Body Font Size
+@fontsize: 20px; // Body Font Size
 @lineheight: 36px; // Document Line Height
 
 @userfont: 'Montserrat', sans-serif;
@@ -28,6 +28,21 @@
 
 .container {
     .wrapper();
+}
+
+::placeholder {
+	color: @white;
+}
+
+::selection {
+	background-color: @accent2;
+	color: #fff;
+}
+
+input, textarea {
+	outline: none;
+	&:focus:required:invalid { border: 1px solid @accent2 }
+	&:required:valid { border: 1px solid green }
 }
 
 @font-face {
@@ -66,6 +81,18 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBoldItalic.eot');
+    src: url('../fonts/Montserrat-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBoldItalic.woff') format('woff'),
+        url('../fonts/Montserrat-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
 
 html, body {
     overflow-x: hidden;
@@ -81,6 +108,40 @@ body {
     background-color: @bg;
     text-rendering: optimizeSpeed;
     position: relative;
+
+    .sm-block({
+        font-size: 14px;
+        line-height: 17px;
+    });
+}
+
+main {
+    min-height: 100vh;
+}
+
+.h1 {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 55px;
+    text-transform: uppercase;
+    color: @accent;
+
+    .md-block({
+        font-size: 35px;
+        line-height: 45px;
+    });
+
+    .sm-block({
+        font-size: 20px;
+        line-height: 24px;
+    });
+
+    span {
+        .sm-block({
+            font-size: 15px;
+            line-height: 18px;
+        });
+    }
 }
 
 .h2 {
@@ -96,8 +157,73 @@ body {
     });
 }
 
+.bold {
+    color: @brdr;
+    font-weight: 600;
+}
+
+.dark-bg {
+    color: @white;
+	background-color: @accent;
+}
+
+.row {
+    .row-flex();
+}
+
+.col-6 {
+    .col();
+    .size(6);
+    .size-md(12);
+}
+
+.col-7 {
+    .col();
+    .size(7);
+    .size-md(12);
+}
+
+.col-5 {
+    .col();
+    .size(5);
+    .size-md(12);
+}
+
+.md-none {
+    .md(display, none);
+}
+
+.order-md-1 {
+    .md(order, -1);
+}
+
+.align-center {
+    align-items: center;
+}
+
+p+p {
+    margin-top: 34px;
+    .sm(margin-top, 20px);
+}
+
+.accent {
+    color: @accent;
+}
+
 .accent2 {
     color: @accent2;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea {
+	resize: none;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */

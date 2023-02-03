@@ -1,0 +1,28 @@
+.form {
+
+
+	&__input {
+		display: block;
+		width: 100%;
+		padding: 15px 5px;
+		font-size: 14px;
+		line-height: 17px;
+		color: @white;
+
+		border: none;
+		background-color: transparent;
+		border-bottom: 1px solid @white;
+
+		&:focus-visible {
+			outline: none;
+		}
+
+		&+& {
+			margin-top: -1px;
+		}
+	}
+
+	.btn {
+		margin-top: 30px;
+	}
+}
