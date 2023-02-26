@@ -24,15 +24,7 @@ const sertCarousel = new Carousel(document.querySelector(".carousel__sert"), {
 	// Navigation: false,
 });
 
-const feedbackCarousel = new Carousel(document.querySelector(".carousel__feedback"), {
-	'slidesPerPage' : 1,
-	// 'friction' : 0.8,
-	'infinite' : false, 
-	// 'center': true, 
-	// 'fill' : false,
-  // 'Autoplay': {
-  //   timeout: 1000,
-  // },
-	// 'Dots': false,
-	// Navigation: false,
-});
+// const feedbackCarousel = new Carousel(document.querySelector(".carousel__feedback"), {
+// 	'slidesPerPage' : 1,
+// 	'infinite' : false, 
+// });
