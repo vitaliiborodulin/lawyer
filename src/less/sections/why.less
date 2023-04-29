@@ -61,6 +61,10 @@
 				});
 			}
 
+			&:hover a {
+				text-decoration: underline;
+			}
+
 			&:nth-child(1)::before {
 				background-image: url(../img/why-1.svg);
 			}
@@ -88,6 +92,11 @@
 
 			&:hover::before {
 				transform: translateY(-8px);
+			}
+
+			a {
+				text-decoration: none;
+				cursor: pointer;
 			}
 
 		}
