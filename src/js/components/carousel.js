@@ -1,28 +1,40 @@
-const diplomaCarousel = new Carousel(document.querySelector(".carousel__diploma"), {
-	'slidesPerPage' : 2,
-	// 'friction' : 0.8,
-	'infinite' : false, 
-	// 'center': true, 
-	// 'fill' : false,
-  // 'Autoplay': {
-  //   timeout: 1000,
-  // },
-	'Dots': false,
-	// Navigation: false,
-});
+const cd = document.querySelector(".carousel__diploma");
 
-const sertCarousel = new Carousel(document.querySelector(".carousel__sert"), {
-	'slidesPerPage' : 2,
-	// 'friction' : 0.8,
-	'infinite' : false, 
-	// 'center': true, 
-	// 'fill' : false,
-  // 'Autoplay': {
-  //   timeout: 1000,
-  // },
-	'Dots': false,
-	// Navigation: false,
-});
+if(cd){
+
+	const diplomaCarousel = new Carousel(cd, {
+		'slidesPerPage' : 2,
+		// 'friction' : 0.8,
+		'infinite' : false, 
+		// 'center': true, 
+		// 'fill' : false,
+		// 'Autoplay': {
+		//   timeout: 1000,
+		// },
+		'Dots': false,
+		// Navigation: false,
+	});
+
+}
+
+const sc = document.querySelector(".carousel__sert");
+
+if(sc){
+
+	const sertCarousel = new Carousel(sc, {
+		'slidesPerPage' : 2,
+		// 'friction' : 0.8,
+		'infinite' : false, 
+		// 'center': true, 
+		// 'fill' : false,
+		// 'Autoplay': {
+		//   timeout: 1000,
+		// },
+		'Dots': false,
+		// Navigation: false,
+	});
+
+}
 
 // const feedbackCarousel = new Carousel(document.querySelector(".carousel__feedback"), {
 // 	'slidesPerPage' : 1,
